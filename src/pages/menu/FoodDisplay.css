@@ -1,0 +1,20 @@
+.food-display {
+  padding: 20px;
+ 
+}
+
+.food-display h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+   margin-left:30px;
+
+}
+
+.food-display-list {
+  display: grid;
+  height: 1150px;
+  overflow: scroll;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap:10px;
+}
