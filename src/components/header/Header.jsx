@@ -21,24 +21,27 @@ const {getTotalCartAmount} =useContext(StoreContext);
         <li className={menu === "home" ? "active" : ""}>
           <Link to="/">Home</Link>
         </li>
-        <li className={menu === "category" ? "active" : ""}>
-          <Link to="/category">Categories</Link>
+          <li className={menu === "about" ? "active" : ""}>
+          <Link to="/about">About Us</Link>
         </li>
+       
         <li className={menu === "recepie" ? "active" : ""}>
           <Link to="/recepie">Recipes</Link>
         </li>
         <li className={menu === "menu" ? "active" : ""}>
           <Link to="/menu">Menu</Link>
         </li>
-        <li className={menu === "blog" ? "active" : ""}>
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li className={menu === "about" ? "active" : ""}>
-          <Link to="/about">About Us</Link>
-        </li>
+       
         <li className={menu === "contact" ? "active" : ""}>
           <Link to="/contact">Contact</Link>
         </li>
+         <li className={menu === "services" ? "active" : ""}>
+          <Link to="/services">Services</Link>
+        </li>
+         <li className={menu === "blog" ? "active" : ""}>
+          <Link to="/blog">Blog</Link>
+        </li>
+       
       </ul>
 
       <div className="navbar-right">

@@ -84,14 +84,42 @@ input[type="email"]:focus {
 .cart-total button:hover {
   background-color: #218838;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .multi-field {
-    flex-direction: column;
+@media (max-width: 480px) {
+  .place-order {
+    padding: 20px 10px;
   }
 
-  .place-order {
+  .place-order-left,
+  .place-order-right {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .multi-field {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .cart-total h2 {
+    font-size: 18px;
+  }
+
+  .cart-total-details {
+    font-size: 14px;
+  }
+
+  .cart-total button {
+    font-size: 15px;
+    padding: 10px;
   }
 }

@@ -1,6 +1,6 @@
 import "./Home.css";
 
-
+import {Link }from"react-router-dom";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
             mission is to satisfy your cravings and elevate your dining
             experience, one delicious meal at a time.
           </p>
-          <button>View Menu</button>
+          <Link to="/menu"><button>View Menu</button></Link>
         </div>
       </div>
 

@@ -66,3 +66,35 @@ font-size: 40px;
     border:none;
     background-color: grey;
 }
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+    align-items: center;
+  }
+
+  .para {
+    width: 100%;
+    font-size: 16px;
+    margin-top: -20px;
+  }
+
+  .logo {
+    font-size: 36px;
+    width: auto;
+  }
+
+  .footer-social-icons {
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+}

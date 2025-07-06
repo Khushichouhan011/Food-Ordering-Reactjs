@@ -1,0 +1,198 @@
+.contact-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* 🔷 Gradient Banner */
+.contact-banner {
+  background: linear-gradient(135deg, #ff6347, #ff914d);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-banner h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+/* 🔶 Inquiry Section */
+.inquiry-section {
+  padding: 40px 5vw;
+  text-align: center;
+}
+
+.inquiry-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.inquiry-section p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form textarea {
+  padding: 15px;
+  font-size: 16px;
+  height: 120px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 🕒 Open Info */
+.open-info-section {
+  background-color: #fafafa;
+  padding: 40px 5vw;
+  text-align: center;
+}
+
+.open-info-section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.open-info p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+/* 🧾 Customer Info Section */
+.customer-info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 5vw;
+  background: #fff;
+}
+
+.customer-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.customer-form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.customer-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.customer-form button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.customer-form h2 {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .contact-banner h1 {
+    font-size: 32px;
+  }
+
+  .inquiry-section h2 {
+    font-size: 24px;
+  }
+
+  .inquiry-section p {
+    font-size: 16px;
+  }
+
+  .contact-form textarea,
+  .contact-form button,
+  .customer-form input,
+  .customer-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .customer-form h2 {
+    font-size: 22px;
+  }
+
+  .open-info-section h2 {
+    font-size: 22px;
+  }
+
+  .open-info p {
+    font-size: 16px;
+  }
+
+  .customer-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-banner h1 {
+    font-size: 28px;
+    padding: 60px 10px;
+  }
+
+  .contact-form,
+  .customer-form {
+    padding: 0 10px;
+  }
+
+  .inquiry-section h2,
+  .open-info-section h2,
+  .customer-form h2 {
+    font-size: 20px;
+  }
+
+  .inquiry-section p,
+  .open-info p {
+    font-size: 15px;
+  }
+
+  .contact-form button,
+  .customer-form button {
+    width: 100%;
+  }
+
+  .customer-image img {
+    width: 140px;
+    height: 140px;
+  }
+}

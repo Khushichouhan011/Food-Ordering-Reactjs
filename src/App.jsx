@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import AppLayout from "./AppLayout";
 import Home from "./pages/home/Home";
-import Category from "./pages/category/Category";
+import Services from "./pages/services/Services";
 import Contact from "./pages/contact/Contact";
 import Blog from "./pages/blog/Blog";
 import About from "./pages/about/About";
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} />
-          <Route path="category" element={<Category />} />
+          <Route path="services" element={<Services />} />
           <Route path='cart' element={<Cart/>} />
           <Route path="recepie" element={<Recepie/>} />
             <Route path="menu" element={<Menu/>} />
