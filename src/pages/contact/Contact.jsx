@@ -1,7 +1,7 @@
 import React from "react";
-import "./Contact.css";
+import "./Contact.css";import { BiDetail } from "react-icons/bi";
 import img6 from "/images/img6.avif"; // Make sure image exists
-
+import { IoCall } from "react-icons/io5";
 const Contact = () => {
   return (
     <div className="contact-page">
@@ -24,7 +24,8 @@ const Contact = () => {
 
       {/* 🕒 Open Hours Section */}
       <div className="open-info-section">
-        <h2>📞 We Are Open</h2>
+        <h2>
+<IoCall /> We Are Open</h2>
         <div className="open-info">
           <p><strong>Time:</strong> Mon-Sun, 9 AM - 11 PM</p>
           <p><strong>Phone:</strong> +91 98765 43210</p>
@@ -33,13 +34,14 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* 🧾 Customer Info Section */}
+  
       <div className="customer-info-section">
         <div className="customer-image">
           <img src={img6} alt="Customer" />
         </div>
         <form className="customer-form">
-          <h2>📝 Customer Contact Details</h2>
+          <h2>
+<BiDetail /> Customer Contact Details</h2>
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email Address" required />
           <input type="tel" placeholder="Phone Number" required />

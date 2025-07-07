@@ -5,15 +5,18 @@
 
 /* 🔷 Gradient Banner */
 .contact-banner {
-  background: linear-gradient(135deg, #ff6347, #ff914d);
+  background: linear-gradient(135deg, #ff6347, #e49260, orange);
   color: white;
   text-align: center;
   padding: 80px 20px;
+  height:400px;
 }
 
 .contact-banner h1 {
-  font-size: 40px;
-  margin: 0;
+  font-size: 60px;
+  margin-top:150px;
+  text-align: center;
+ 
 }
 
 /* 🔶 Inquiry Section */
@@ -23,20 +26,21 @@
 }
 
 .inquiry-section h2 {
-  font-size: 28px;
+  font-size: 35px;
   margin-bottom: 10px;
 }
 
 .inquiry-section p {
-  font-size: 18px;
+  font-size: 22px;
   color: #666;
   margin-bottom: 20px;
 }
 
 .contact-form {
-  max-width: 600px;
+  max-width: 1000px;
   margin: auto;
   display: flex;
+ 
   flex-direction: column;
   gap: 15px;
 }
@@ -44,7 +48,7 @@
 .contact-form textarea {
   padding: 15px;
   font-size: 16px;
-  height: 120px;
+  height: 220px;
   resize: none;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -52,6 +56,7 @@
 
 .contact-form button {
   padding: 12px;
+  height:80px;
   font-size: 16px;
   background-color: tomato;
   color: white;
@@ -68,12 +73,12 @@
 }
 
 .open-info-section h2 {
-  font-size: 26px;
+  font-size: 35px;
   margin-bottom: 20px;
 }
 
 .open-info p {
-  font-size: 18px;
+  font-size: 22px;
   margin: 6px 0;
 }
 
@@ -81,16 +86,17 @@
 .customer-info-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  gap:220px;
+  margin-left:200px;
+  justify-content: left;
+  align-items: left;
   padding: 50px 5vw;
   background: #fff;
 }
 
 .customer-image img {
-  width: 250px;
-  height: 250px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -102,14 +108,14 @@
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px; font-size: 22px;
 }
 
 .customer-form input {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 16px;
+ 
 }
 
 .customer-form button {
