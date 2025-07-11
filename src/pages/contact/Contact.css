@@ -9,14 +9,15 @@
   color: white;
   text-align: center;
   padding: 80px 20px;
-  height:400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-banner h1 {
   font-size: 60px;
-  margin-top:150px;
-  text-align: center;
- 
+  margin: 0;
 }
 
 /* 🔶 Inquiry Section */
@@ -31,7 +32,7 @@
 }
 
 .inquiry-section p {
-  font-size: 22px;
+  font-size: 21px;
   color: #666;
   margin-bottom: 20px;
 }
@@ -40,14 +41,14 @@
   max-width: 1000px;
   margin: auto;
   display: flex;
- 
   flex-direction: column;
   gap: 15px;
+  padding: 0 15px;
 }
 
 .contact-form textarea {
   padding: 15px;
-  font-size: 16px;
+  font-size: 21px;
   height: 220px;
   resize: none;
   border: 1px solid #ccc;
@@ -55,14 +56,19 @@
 }
 
 .contact-form button {
-  padding: 12px;
-  height:80px;
-  font-size: 16px;
+  padding-left: 400px;
+  padding-top: 14px;   padding-bottom: 14px;
+  font-size: 21px;
   background-color: tomato;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e14a2f;
 }
 
 /* 🕒 Open Info */
@@ -78,7 +84,7 @@
 }
 
 .open-info p {
-  font-size: 22px;
+  font-size: 21px;
   margin: 6px 0;
 }
 
@@ -86,29 +92,39 @@
 .customer-info-section {
   display: flex;
   flex-wrap: wrap;
-  gap:220px;
-  margin-left:200px;
-  justify-content: left;
-  align-items: left;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
   padding: 50px 5vw;
   background: #fff;
 }
 
+.customer-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
 .customer-image img {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-left: -300px;  margin-top: 50px;
+   margin-right: -200px;
+  border-radius:12px;
   object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .customer-form {
   flex: 1;
-  min-width: 280px;
-  max-width: 500px;
+  min-width: 700px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 15px; font-size: 22px;
+  gap: 15px;
+  font-size: 21px;
 }
 
 .customer-form input {
@@ -119,66 +135,67 @@
 }
 
 .customer-form button {
-  padding: 12px;
+  padding-left: 300px;
   background-color: #28a745;
   color: white;
-  font-size: 16px;
+  font-size: 21px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.customer-form button:hover {
+  background-color: #218838;
 }
 
 .customer-form h2 {
   margin-bottom: 10px;
+  font-size: 26px;
 }
-@media (max-width: 768px) {
+
+/* 📱 Responsive Styles */
+@media (max-width: 992px) {
   .contact-banner h1 {
-    font-size: 32px;
+    font-size: 48px;
   }
 
   .inquiry-section h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
-  .inquiry-section p {
-    font-size: 16px;
-  }
-
-  .contact-form textarea,
-  .contact-form button,
-  .customer-form input,
-  .customer-form button {
-    font-size: 15px;
-    padding: 10px;
+  .inquiry-section p,
+  .open-info p {
+    font-size: 21px;
   }
 
   .customer-form h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .open-info-section h2 {
-    font-size: 22px;
+    font-size: 28px;
   }
 
-  .open-info p {
-    font-size: 16px;
+  .customer-info-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 5vw;
   }
 
   .customer-image img {
-    width: 180px;
-    height: 180px;
+    max-width: 300px;
   }
 }
 
-@media (max-width: 480px) {
-  .contact-banner h1 {
-    font-size: 28px;
-    padding: 60px 10px;
+@media (max-width: 576px) {
+  .contact-banner {
+    height: 300px;
+    padding: 40px 10px;
   }
 
-  .contact-form,
-  .customer-form {
-    padding: 0 10px;
+  .contact-banner h1 {
+    font-size: 30px;
   }
 
   .inquiry-section h2,
@@ -192,13 +209,15 @@
     font-size: 15px;
   }
 
+  .contact-form textarea,
   .contact-form button,
+  .customer-form input,
   .customer-form button {
-    width: 100%;
+    font-size: 14px;
+    padding: 10px;
   }
 
   .customer-image img {
-    width: 140px;
-    height: 140px;
+    max-width: 200px;
   }
 }

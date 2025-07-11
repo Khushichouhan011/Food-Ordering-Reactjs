@@ -1,6 +1,5 @@
-
 import "./ExploreMenu.css";
-import img4 from"/images/img4.avif";
+import fbanner from"/images/fbanner.jpg";
 import { menu_list } from "./MenuList";
 const ExploreMenu = ({categories ,setCategories}) => {
   return (
@@ -11,13 +10,7 @@ const ExploreMenu = ({categories ,setCategories}) => {
     <div className="explore-menu" id="menu">
       <div className="menu-page">
       {/* ✅ Banner Section */}
-      <div className="menu-banner">
-        <img src={img4} alt="Menu Banner" />
-        <div className="menu-banner-text">
-          <h1>Our Delicious Menu</h1>
-          <p>Explore our wide variety of dishes made with love and taste!</p>
-        </div>
-      </div>
+    
       </div>
       <h1>Explore Our Menu</h1>
       <p className="explore-menu-text">Choose from a diverse menu featuring  a delectable array of dishes crafted with the finest ingredients and culinary expertise .Our mission is to satisfy your cravings ad elevant your dinnig experience ,one deliciuos meal at a time</p>

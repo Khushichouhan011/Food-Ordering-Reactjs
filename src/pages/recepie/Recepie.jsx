@@ -1,59 +1,82 @@
-import React from "react";
+
 import "./Recepie.css";
-import img4 from"/images/img4.avif";
+import { useState } from "react";
+
+
+
+const recipes = [
+  {
+    id: 1,
+    title: "Paneer Butter Masala",
+    description: "Rich and creamy paneer dish.",
+    ingredients: ["Paneer", "Butter", "Tomato", "Cream", "Spices"],
+    steps: ["Heat butter", "Add tomato puree", "Add paneer", "Cook & serve"]
+  },
+  {
+    id: 2,
+    title: "Chole Bhature",
+    description: "Spicy chole with fluffy bhature.",
+    ingredients: ["Chickpeas", "Spices", "Maida", "Curd"],
+    steps: ["Boil chole", "Prepare masala", "Knead dough", "Fry bhature"]
+  },
+  {
+    id: 3,
+    title: "Masala Dosa",
+    description: "South Indian crispy dosa with aloo masala.",
+    ingredients: ["Dosa batter", "Potatoes", "Spices"],
+    steps: ["Make dosa", "Prepare aloo", "Stuff and serve"]
+  }
+];
 
 const Recepie = () => {
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+
+  const handleSelect = (recipe) => {
+    setSelectedRecipe(recipe);
+  };
+
+  const handleBack = () => {
+    setSelectedRecipe(null);
+  };
+
   return (
-    <div className="recepie-page">
-
-      {/* 🔶 Banner Section */}
-      <div className="recipe-banner">
-        <img src={img4} alt="Recipe Banner" />
-        <div className="recipe-banner-text">
-          <h1>Spicy Paneer Butter Masala</h1>
-          <p>A rich, creamy and flavorful Indian dish perfect for any occasion.</p>
+    <div className="recipe-container">
+      {selectedRecipe ? (
+        <div className="recipe-detail">
+          <h2>{selectedRecipe.title}</h2>
+          <p>{selectedRecipe.description}</p>
+          <h4>Ingredients:</h4>
+          <ul>
+            {selectedRecipe.ingredients.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          <h4>Steps:</h4>
+          <ol>
+            {selectedRecipe.steps.map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
+          </ol>
+          <button onClick={handleBack}>🔙 Back to all recipes</button>
         </div>
-      </div>
-
-      {/* 🔷 Info Tags */}
-      <div className="recipe-info">
-        <span>🕒 45 mins</span>
-        <span>🍽️ 4 Servings</span>
-        <span>🌶️ Medium</span>
-      </div>
-
-      {/* 🛒 Ingredients */}
-      <div className="recipe-section">
-        <h2>Ingredients</h2>
-        <ul>
-          <li>200g Paneer (cottage cheese)</li>
-          <li>2 Tomatoes (pureed)</li>
-          <li>1 Onion (finely chopped)</li>
-          <li>2 tbsp Cream</li>
-          <li>1 tsp Ginger Garlic Paste</li>
-          <li>Spices: Turmeric, Chili, Garam Masala, Salt</li>
-        </ul>
-      </div>
-
-      {/* 🧑‍🍳 Instructions */}
-      <div className="recipe-section">
-        <h2>Instructions</h2>
-        <ol>
-          <li>Heat oil and sauté onions until golden brown.</li>
-          <li>Add ginger garlic paste and cook until raw smell disappears.</li>
-          <li>Pour in tomato puree and let it simmer for 10 mins.</li>
-          <li>Add spices and cream, mix well.</li>
-          <li>Add paneer cubes, simmer for 5–7 mins. Serve hot!</li>
-        </ol>
-      </div>
-
-      {/* 💡 Tips */}
-      <div className="recipe-section tips">
-        <h2>Chef’s Tips</h2>
-        <p>Use fresh cream for a rich taste. Garnish with coriander and serve with naan or rice!</p>
-      </div>
+      ) : (
+        <div className="recipe-list">
+          <h2>🍽️ All Recipes</h2>
+          {recipes.map((recipe) => (
+            <div className="recipe-card" key={recipe.id}>
+              <h3>{recipe.title}</h3>
+              <p>{recipe.description}</p>
+              <button onClick={() => handleSelect(recipe)}>View Recipe</button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  );
-};
+
+ 
+  )}
 
 export default Recepie;
+
+
+

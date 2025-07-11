@@ -1,7 +1,9 @@
 .header {
-  height: 34vw;
-  margin: 30px 40px;
-  background: url('/images/banner.jpg') no-repeat center center;
+  height: 36vw;
+margin-left:40px; 
+margin-right: 40px;
+margin-top: 40px; /* background: url('/images/banner.jpg') no-repeat center center; */
+  background-color: orange;
   background-size: cover; /* ✅ Fixes image display */
   position: relative;
   border-radius: 15px;
@@ -35,15 +37,17 @@
 
 .header-contents button {
   border: none;
-  color: #747474;
+margin-top: -30px;
   font-weight: 500;
   padding: 1vw 2.3vw;
-  background-color: white;
-  border-radius: 50px;
+  background-color:tomato;
+ color:white;
   font-size: max(1vw, 13px);
   cursor: pointer;
 }
-
+.header-contents a{
+  text-decoration: none;
+}
 /* ✅ Tablet Screens */
 @media (max-width: 768px) {
   .header {

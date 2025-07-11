@@ -14,7 +14,7 @@
 .explore-menu-text {
   margin-top: -20px;
   max-width: 80%;
-  font-size: 22px;
+  font-size: 30px;
   color: #808080;
 }
 
@@ -39,21 +39,23 @@
   text-align: center;
 }
 
+
 .explore-menu-list-item img {
-  width: 7.7vw;
-  min-width: 80px;
-  max-width: 110px;
-  border-radius: 50%;
+  width: 300px;           /* Fixed width */
+  height: 300px;          /* Fixed height */
+  object-fit: cover;      /* Crop image neatly */
+  border-radius: 8px;     /* Optional: for smooth look */
   cursor: pointer;
   box-sizing: border-box;
   transition: transform 0.3s;
 }
 
+
 .explore-menu-list-item img:hover,
 .explore-menu-list-item img.active {
   transform: scale(1.05);
-  border: 4px solid orange;
-  padding: 2px;
+text-decoration: overline;
+ 
 }
 
 .explore-menu-list-item p {

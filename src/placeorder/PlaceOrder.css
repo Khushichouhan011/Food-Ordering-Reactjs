@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 40px;
   padding: 40px 20px;
-  background-color: #f7f7f7;
+  background-color: #f7f7f7; 
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -11,6 +11,7 @@
 .place-order-right {
   flex: 1;
   min-width: 300px;
+
   background: #ffffff;
   padding: 25px;
   border-radius: 12px;

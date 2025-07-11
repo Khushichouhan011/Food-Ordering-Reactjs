@@ -1,64 +1,46 @@
 import img1 from"/images/img1.avif";
-import img4 from"/images/img4.avif";
 import img5 from"/images/img5.avif";
-
 import img6 from"/images/img6.avif";
-export const menu_list=[
-    {
-        menu_name:"soup",
-        menu_image :img1
-    },
-      {
-        menu_name:"Fast Food",
-        menu_image :img1
-    },
-      {
-        menu_name:"Beverages",
-        menu_image :img1
-    },
-      {
-        menu_name:"Desserts",
-        menu_image :img1
-    },  {
-        menu_name:"Street Food",
-        menu_image :img1
-    },
-     
-      {
-        menu_name:"South Indian",
-        menu_image :img1
-    },
-     {
-        menu_name:"Chinese/Italian",
-        menu_image :img1
-    },
-     
-      {
-        menu_name:"Internationalfd",
-        menu_image :img1
-    }, {
-        menu_name:"Sea Food ",
-        menu_image :img1
-    },
-     
-      {
-        menu_name:"Rice Special",
-        menu_image :img1
-    },
-      {
-        menu_name:"Jain Special",
-        menu_image :img1
-    },
-      {
-        menu_name:"Kid Special",
-        menu_image :img1
-    },
-      {
-        menu_name:"Combo Meal",
-        menu_image :img1
-    },
-]
+import img4 from"/images/img4.avif";
+import dessert from "/images/dessert.avif";
+import tea from "/images/tea.avif";
+import north from "/images/north.avif";
+import chinese from "/images/chinese.avif";
+import biryani from "/images/biryani.avif";
+import noodle from "/images/noodle.avif";
+import pizza from "/images/pizza.avif";
+import cake from "/images/cake.avif";
+import ice from "/images/ice.avif";
+import gulab from "/images/gulab.avif";
+import paratha from "/images/paratha.avif";
+import pure from "/images/pure.avif";
+import south from "/images/south.avif";
+import cofee from "/images/cofee.avif";
+import khicdhi from "/images/khicdhi.avif";
+import lassi from "/images/lassi.avif";
+import poori from "/images/poori.avif";
+import chole from "/images/chole.avif";
 
+export const menu_list = [
+  {  menu_image: dessert },
+  {  menu_image: tea },
+  { menu_image: north },
+  { menu_image: chinese },
+  { menu_image: biryani },
+  {  menu_image: noodle },
+  {menu_image: pizza },
+  {  menu_image: cake },
+  { menu_image: ice },
+  { menu_image: gulab },
+  {menu_image: paratha },
+  {  menu_image: pure },
+  { menu_image: south },
+  {  menu_image: cofee },
+  { menu_image: khicdhi },
+  { menu_image: lassi },
+  { menu_image: poori },
+  {  menu_image: chole },
+];
 
 
 export const food_list = [

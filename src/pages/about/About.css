@@ -3,6 +3,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* 🔶 About Section (Image + Text) */
 .about-section {
   display: flex;
   align-items: center;
@@ -16,9 +17,14 @@
   flex-direction: row-reverse;
 }
 
+.about-image {
+  flex: 1;
+  min-width: 280px;
+}
+
 .about-image img {
   width: 100%;
-  width: 800px;
+  max-width: 800px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -35,7 +41,7 @@
 }
 
 .about-content p {
-  font-size: 18px;
+  font-size: 21px;
   color: #666;
   margin-bottom: 25px;
   line-height: 1.6;
@@ -43,7 +49,7 @@
 
 .about-content button {
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 21px;
   background-color: tomato;
   color: white;
   border: none;
@@ -56,10 +62,11 @@
   background-color: #e04e2d;
 }
 
+/* 🔷 Growth Section */
 .about-growth-section {
   text-align: center;
   padding: 40px 5vw;
-  background-color:pink;
+  background-color: pink;
 }
 
 .about-growth-section h1 {
@@ -69,7 +76,7 @@
 }
 
 .about-growth-section p {
-  font-size: 18px;
+  font-size:21px;
   color: #666;
   margin-bottom: 40px;
   max-width: 700px;
@@ -78,6 +85,7 @@
   line-height: 1.6;
 }
 
+/* 🔸 Reason Cards */
 .growth-reasons {
   display: flex;
   flex-direction: column;
@@ -100,28 +108,32 @@
 }
 
 .reason-card h3 {
-  font-size: 22px;
+  font-size: 21px;
   color: tomato;
   margin-bottom: 10px;
 }
 
 .reason-card p {
-  font-size: 16px;
+  font-size: 21px;
   color: #555;
 }
 
-/* Responsive */
+/* ✅ Tablet & Above */
 @media (min-width: 768px) {
   .growth-reasons {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .reason-card {
     flex: 1;
     margin: 0 10px;
+    max-width: 100%;
   }
 }
+
+/* ✅ Tablet and Below */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -129,7 +141,6 @@
   }
 
   .about-image img {
-    width: 100%;
     max-width: 100%;
   }
 
@@ -164,6 +175,7 @@
   }
 }
 
+/* ✅ Mobile Devices */
 @media (max-width: 480px) {
   .about-page {
     padding: 30px 4vw;

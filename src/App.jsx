@@ -3,7 +3,7 @@ import AppLayout from "./AppLayout";
 import Home from "./pages/home/Home";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/Contact";
-import Blog from "./pages/blog/Blog";
+
 import About from "./pages/about/About";
 import Recepie from "./pages/recepie/Recepie";
 import Menu from "./pages/menu/Menu";
@@ -20,7 +20,7 @@ const App = () => {
           <Route index element={<Home/>} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="blog" element={<Blog />} />
+          
           <Route path="services" element={<Services />} />
           <Route path='cart' element={<Cart/>} />
           <Route path="recepie" element={<Recepie/>} />

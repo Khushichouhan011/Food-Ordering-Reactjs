@@ -1,107 +1,113 @@
-.navbar{
-      margin-left: 30px;
-    margin-right: 30px;
-    padding:0px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8vw;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.navbar-menu{
-    display: flex;
-.navbar .logo{
-width:200px;
-color:tomato;
-
-    }
-    list-style: none;
-    gap:40px;
- color:#49557e; 
-font-size: 18px;
+.navbar-logo h1 {
+  font-size: 32px;
+  color: tomato;
+  font-weight: bold;
+  cursor: pointer;
 }
-  a{
-    text-decoration: none;}
-.lo{
-    font-weight: bolder;
-    font-size:30px;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color:black;
-    font-size: larger;
-}
-.navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
-}
-.navbar-right{
-    display: flex;
-    align-items: center;
-    gap:40px;
-}
-.navbar li{
-    cursor: pointer;
+.navbar-logo {
+  text-decoration: none;
+  color: inherit; /* Optional: to keep the text color consistent */
 }
 
-.navbar button{
-    background-color: transparent;
-    color:#49557e;
-    border: 1px solid tomato;
-    width:150px;
-    font-size: 16px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    transition: 0.3s;
-    cursor: pointer;
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
 }
-.navbar button:hover{
-background-color: #fff4f2;
-}
-.navbar-search-icon{
-    position: relative;
-}
-.navbar-search-icon .dot{
-    position: absolute;
-min-height: 10px;
-min-width: 10px;
-background-color: tomato;
-border-radius: 5px;
-top:-8px;
-right:-8px;}
 
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
 
+.navbar-menu li a:hover,
+.navbar-menu li.active a {
+  color: tomato;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.navbar-cart {
+  position: relative;
+}
+
+.cart-dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: tomato;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.sign-in-btn {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #e13c3c;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 20px;
+    padding: 15px 5vw;
   }
 
   .navbar-menu {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
-    margin-top: 20px;
+    padding: 10px 0;
   }
 
   .navbar-right {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
     width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
   }
 
-  .navbar button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
+  .navbar-logo h1 {
+    font-size: 26px;
   }
 
-  .lo {
-    font-size: 24px;
-  }
-
-  .navbar ul li a {
-    font-size: 16px;
+  .sign-in-btn {
+    padding: 6px 14px;
+    font-size: 14px;
   }
 }

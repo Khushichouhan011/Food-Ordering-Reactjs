@@ -16,7 +16,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -28,7 +28,7 @@
   background: #fff;
   padding: 30px 40px;
   border-radius: 12px;
-  width: 500px;
+  width: 600px;
   max-width: 90%;
   max-height: 90%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -57,10 +57,9 @@
 }
 
 .login-popup-title h2 {
-  margin: 0;
-  text-align: center;
   font-size: 24px;
   color: #333;
+  margin: 0;
 }
 
 .close-icon {
@@ -106,6 +105,10 @@
   color: #444;
 }
 
+.submit {
+  margin-top: 5px;
+}
+
 .login-popup p,
 .login-popup .para,
 .login-popup .para1 {
@@ -113,10 +116,6 @@
   color: #555;
   text-align: center;
   margin: 0;
-}
-
-.submit {
-  margin-top: 20px;
 }
 
 .login-popup span {
@@ -127,12 +126,11 @@
   margin-left: 5px;
 }
 
-/* 📱 Tablet */
+/* Tablet */
 @media (max-width: 768px) {
   .login-popup-container {
     padding: 25px;
     width: 90%;
-    height: auto;
     gap: 16px;
   }
 
@@ -157,7 +155,7 @@
   }
 }
 
-/* 📱 Mobile */
+/* Mobile */
 @media (max-width: 480px) {
   .login-popup-container {
     padding: 20px;
