@@ -3,7 +3,6 @@ import AppLayout from "./AppLayout";
 import Home from "./pages/home/Home";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/Contact";
-
 import About from "./pages/about/About";
 import Recepie from "./pages/recepie/Recepie";
 import Menu from "./pages/menu/Menu";
@@ -11,12 +10,11 @@ import Cart from "./carts/Cart";
 import PlaceOrder from "./placeorder/PlaceOrder";
 const App = () => {
 
-    return (
+ return (
       <>
-   
-  <div className="app">
+   <div className="app">
       <Routes>
-        <Route path="/" element={<AppLayout />}>
+        <Route path="/"element={<AppLayout/>}>
           <Route index element={<Home/>} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />

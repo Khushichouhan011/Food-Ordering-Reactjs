@@ -9,7 +9,6 @@ import people2 from "/images/people2.jpg";
 import people3 from "/images/people3.jpg";
 import people4 from "/images/people4.webp";
 import people5 from "/images/people5.jpg";
-
 import dineservice from "/images/dineservice.jpg";
 import take from "/images/take.jpg";
 import delivary from "/images/delivary.jpg";

@@ -1,6 +1,7 @@
 .about-page {
   padding: 50px 5vw;
   font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
 }
 
 /* 🔶 About Section (Image + Text) */
@@ -76,7 +77,7 @@
 }
 
 .about-growth-section p {
-  font-size:21px;
+  font-size: 21px;
   color: #666;
   margin-bottom: 40px;
   max-width: 700px;
@@ -118,67 +119,15 @@
   color: #555;
 }
 
-/* ✅ Tablet & Above */
-@media (min-width: 768px) {
-  .growth-reasons {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .reason-card {
-    flex: 1;
-    margin: 0 10px;
-    max-width: 100%;
-  }
-}
-
-/* ✅ Tablet and Below */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    max-width: 100%;
-  }
-
-  .about-content h2 {
-    font-size: 28px;
-  }
-
-  .about-content p {
-    font-size: 16px;
-  }
-
-  .about-content button {
-    font-size: 15px;
-    padding: 10px 20px;
-  }
-
-  .about-growth-section h1 {
-    font-size: 28px;
-  }
-
-  .about-growth-section p {
-    font-size: 16px;
-  }
-
-  .growth-reasons {
-    flex-direction: column;
-  }
-
-  .reason-card {
-    max-width: 100%;
-    margin: 10px 0;
-  }
-}
-
-/* ✅ Mobile Devices */
+/* ✅ Small Devices: 350px - 480px */
 @media (max-width: 480px) {
   .about-page {
     padding: 30px 4vw;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
   }
 
   .about-content h2 {
@@ -201,5 +150,171 @@
 
   .about-content button {
     width: 100%;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* ✅ Medium Devices: 481px - 678px */
+@media (min-width: 481px) and (max-width: 678px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .about-content p,
+  .about-growth-section p,
+  .reason-card p {
+    font-size: 16px;
+  }
+
+  .reason-card h3 {
+    font-size: 20px;
+  }
+
+  .about-growth-section h1 {
+    font-size: 28px;
+  }
+
+  .about-content button {
+    font-size: 17px;
+    padding: 10px 22px;
+  }
+
+  .growth-reasons {
+    flex-direction: column;
+  }
+
+  .reason-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* ✅ Large Devices: 679px - 768px */
+@media (min-width: 679px) and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+  }
+
+  .about-content button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .about-growth-section h1 {
+    font-size: 32px;
+  }
+
+  .about-growth-section p {
+    font-size: 18px;
+  }
+
+  .growth-reasons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .reason-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+  }
+}
+
+/* ✅ Extra Large Devices: 769px - 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+  .about-section {
+    flex-direction: row;
+    gap: 35px;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .about-content p {
+    font-size: 19px;
+  }
+
+  .about-content button {
+    font-size: 19px;
+  }
+
+  .about-growth-section h1 {
+    font-size: 34px;
+  }
+
+  .about-growth-section p {
+    font-size: 20px;
+  }
+
+  .reason-card h3 {
+    font-size: 21px;
+  }
+
+  .reason-card p {
+    font-size: 19px;
+  }
+
+  .growth-reasons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ✅ Desktop: 993px and above */
+@media (min-width: 993px) {
+  .about-section {
+    flex-direction: row;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-content p {
+    font-size: 21px;
+  }
+
+  .about-content button {
+    font-size: 21px;
+  }
+
+  .about-growth-section h1 {
+    font-size: 36px;
+  }
+
+  .about-growth-section p {
+    font-size: 21px;
+  }
+
+  .reason-card h3 {
+    font-size: 21px;
+  }
+
+  .reason-card p {
+    font-size: 21px;
+  }
+
+  .growth-reasons {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
