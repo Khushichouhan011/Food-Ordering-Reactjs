@@ -9,10 +9,6 @@ import people2 from "/images/people2.jpg";
 import people3 from "/images/people3.jpg";
 import people4 from "/images/people4.webp";
 import people5 from "/images/people5.jpg";
-import dineservice from "/images/dineservice.jpg";
-import take from "/images/take.jpg";
-import delivary from "/images/delivary.jpg";
-
 import "./Services.css";
 
 const Services = () => {
@@ -25,21 +21,8 @@ const Services = () => {
           <h1>We Provide Services</h1>
         </div>
 
-        <div className="service-cards">
-          <div className="service-card">
-            <img src={dineservice} alt="Dine In" />
-            <h1><IoFastFoodOutline /> Dine-In Service</h1>
-          </div>
-          <div className="service-card">
-            <img src={delivary} alt="Delivery" />
-            <h1><CiDeliveryTruck /> Fast Delivery</h1>
-          </div>
-          <div className="service-card">
-            <img src={take} alt="Takeaway" />
-            <h1><LuPackage /> Takeaway</h1>
-          </div>
-        </div>
-      </div>
+        
+      </div> 
 
       {/* Reviews Section */}
       <div className="reviews-section">

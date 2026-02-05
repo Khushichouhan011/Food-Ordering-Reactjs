@@ -1,79 +1,70 @@
 .cart-container {
-  padding: 40px 20px;
-  background-color: #f8f8f8;
-  min-height: 100vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .cart-wrapper {
-  max-width: 1200px;
-  margin: auto;
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.cart-header,
+/* Cart Header */
+.cart-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+  gap: 10px;
+  font-weight: 600;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* Cart Item */
 .cart-item {
   display: grid;
-  grid-template-columns: 80px 1fr 80px 80px 80px 60px;
-  text-align: center;
-  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
   gap: 10px;
+  align-items: center;
   padding: 10px 0;
-}
-
-.cart-header {
-  font-weight: bold;
-  font-size: 18px;
-  border-bottom: 1px solid #ddd;
-}
-
-.cart-item {
-  font-size: 16px;
   border-bottom: 1px solid #eee;
 }
 
 .cart-item img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
-  margin: auto;
 }
 
 .remove-btn {
-  color: red;
   cursor: pointer;
-  font-size: 18px;
-  transition: transform 0.2s;
+  color: red;
+  font-weight: bold;
 }
 
-.remove-btn:hover {
-  transform: scale(1.2);
-}
-
+/* Cart Summary & Promo */
 .cart-summary {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
-  margin-top: 30px;
-  justify-content: space-between;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .cart-total-box,
 .promo-code-box {
-  flex: 1;
-  min-width: 250px;
-  background: #f3f3f3;
+  background: #f9f9f9;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 280px;
 }
 
-.cart-total-box h3 {
-  margin-bottom: 20px;
-  color: #333;
+.cart-total-box h3,
+.promo-code-box p {
+  margin-bottom: 15px;
 }
 
 .summary-line {
@@ -85,30 +76,26 @@
 .summary-line.total {
   font-weight: bold;
   font-size: 18px;
-  margin-top: 15px;
 }
 
-.cart-total-box button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  background-color: #ff4747;
-  color: #fff;
+.cart-total-box button,
+.promo-code-box button {
+  margin-top: 10px;
+  padding: 10px;
+  background: tomato;
+  color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 18px;
+  border-radius: 8px;
   cursor: pointer;
+  width: 100%;
 }
 
-.cart-total-box button:hover {
-  background-color: #e03d3d;
+.cart-total-box button:hover,
+.promo-code-box button:hover {
+  background: #e14a2f;
 }
 
-.promo-code-box p {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
+/* Promo Input */
 .promo-input-group {
   display: flex;
   gap: 10px;
@@ -120,35 +107,63 @@
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  outline: none;
 }
 
-.promo-input-group button {
-  padding: 10px 16px;
-  background-color: #28a745;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
+/* 📱 Responsive Styles */
 
-.promo-input-group button:hover {
-  background-color: #218838;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* Tablets */
+@media (max-width: 992px) {
   .cart-header,
   .cart-item {
-    grid-template-columns: 60px 1fr 60px 60px 60px 40px;
+    grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+  }
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .cart-total-box,
+  .promo-code-box {
+    min-width: 250px;
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cart-header {
+    display: none; /* hide table headers on mobile */
+  }
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  .cart-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  .cart-item p {
     font-size: 14px;
   }
+}
 
-  .cart-summary {
-    flex-direction: column;
+/* Extra small devices */
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 10px;
   }
-
-  .cart-total-box button {
-    font-size: 16px;
+  .cart-total-box,
+  .promo-code-box {
+    padding: 15px;
+  }
+  .cart-total-box button,
+  .promo-code-box button {
+    padding: 8px;
+    font-size: 14px;
   }
 }

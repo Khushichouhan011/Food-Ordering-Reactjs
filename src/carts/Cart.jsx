@@ -22,7 +22,6 @@ const Cart = () => {
           <p>Total</p>
           <p>Remove</p>
         </div>
-        
 
         {food_list.map((item) =>
           cartItems[item._id] > 0 ? (

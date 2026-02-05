@@ -1,5 +1,4 @@
-
-/* Base Styles */
+/* Overlay */
 .login-popup {
   position: fixed;
   top: 0;
@@ -12,15 +11,22 @@
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(5px);
-  animation: fadeIn 0.3s ease;
   padding: 20px;
+  animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
+/* Popup Container */
 .login-popup-container {
   background: #fff;
   padding: 30px 40px;
@@ -29,19 +35,26 @@
   max-width: 100%;
   max-height: 90%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  animation: slideUp 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 18px;
   overflow-y: auto;
   box-sizing: border-box;
+  animation: slideUp 0.3s ease;
 }
 
 @keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
+/* Header */
 .login-popup-title {
   display: flex;
   justify-content: space-between;
@@ -60,8 +73,11 @@
   cursor: pointer;
   transition: 0.2s ease;
 }
-.close-icon:hover { color: #ff6347; }
+.close-icon:hover {
+  color: #ff6347;
+}
 
+/* Inputs */
 .login-popup-inputs input {
   width: 100%;
   padding: 10px 12px;
@@ -71,8 +87,13 @@
   border-radius: 6px;
   outline: none;
   box-sizing: border-box;
+  transition: border 0.2s;
+}
+.login-popup-inputs input:focus {
+  border-color: #ff6347;
 }
 
+/* Button */
 .login-popup-container button {
   padding: 12px;
   background-color: #ff6347;
@@ -84,8 +105,11 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-.login-popup-container button:hover { background-color: #e5533c; }
+.login-popup-container button:hover {
+  background-color: #e5533c;
+}
 
+/* Terms */
 .login-popup-condition {
   display: flex;
   gap: 10px;
@@ -94,9 +118,11 @@
   color: #444;
   flex-wrap: wrap;
 }
+.submit {
+  margin-top: 5px;
+}
 
-.submit { margin-top: 5px; }
-
+/* Text Links */
 .login-popup p,
 .login-popup .para,
 .login-popup .para1 {
@@ -105,60 +131,126 @@
   text-align: center;
   margin: 0;
 }
-
 .login-popup span {
   color: #ff6347;
   cursor: pointer;
-  font-size: 16px;
   font-weight: 500;
   margin-left: 5px;
 }
 
 /* Extra Small Devices: <360px */
 @media (max-width: 360px) {
-  .login-popup-container { padding: 15px 10px; }
-  .login-popup-title h2 { font-size: 18px; }
-  .login-popup-inputs input { font-size: 13px; height: 34px; }
-  .login-popup-container button { font-size: 14px; height: 40px; }
-  .login-popup p, .login-popup .para, .login-popup .para1, .login-popup span { font-size: 13px; }
+  .login-popup-container {
+    padding: 15px 10px;
+  }
+  .login-popup-title h2 {
+    font-size: 18px;
+  }
+  .login-popup-inputs input {
+    font-size: 13px;
+    height: 34px;
+  }
+  .login-popup-container button {
+    font-size: 14px;
+    height: 40px;
+  }
+  .login-popup p,
+  .login-popup span {
+    font-size: 13px;
+  }
 }
 
 /* Small Devices: 361px - 480px */
 @media (min-width: 361px) and (max-width: 480px) {
-  .login-popup-container { padding: 20px 15px; width: 90%; }
-  .login-popup-title h2 { font-size: 20px; }
-  .login-popup-inputs input { font-size: 14px; height: 36px; }
-  .login-popup-container button { font-size: 14px; height: 42px; }
-  .login-popup p, .login-popup .para, .login-popup .para1, .login-popup span { font-size: 14px; }
+  .login-popup-container {
+    padding: 20px 15px;
+    width: 90%;
+  }
+  .login-popup-title h2 {
+    font-size: 20px;
+  }
+  .login-popup-inputs input {
+    font-size: 14px;
+    height: 36px;
+  }
+  .login-popup-container button {
+    font-size: 14px;
+    height: 42px;
+  }
+  .login-popup p,
+  .login-popup span {
+    font-size: 14px;
+  }
 }
 
 /* Medium Devices: 481px - 678px */
 @media (min-width: 481px) and (max-width: 678px) {
-  .login-popup-container { padding: 25px 20px; width: 85%; }
-  .login-popup-title h2 { font-size: 22px; }
-  .login-popup-inputs input { font-size: 16px; height: 40px; }
-  .login-popup-container button { font-size: 16px; height: 45px; }
-  .login-popup p, .login-popup .para, .login-popup .para1, .login-popup span { font-size: 15px; }
+  .login-popup-container {
+    padding: 25px 20px;
+    width: 85%;
+  }
+  .login-popup-title h2 {
+    font-size: 22px;
+  }
+  .login-popup-inputs input {
+    font-size: 16px;
+    height: 40px;
+  }
+  .login-popup-container button {
+    font-size: 16px;
+    height: 45px;
+  }
+  .login-popup p,
+  .login-popup span {
+    font-size: 15px;
+  }
 }
 
 /* Large Devices: 679px - 768px */
 @media (min-width: 679px) and (max-width: 768px) {
-  .login-popup-container { padding: 28px 25px; width: 70%; }
-  .login-popup-title h2 { font-size: 22px; }
-  .login-popup-inputs input { font-size: 16px; height: 42px; }
-  .login-popup-container button { font-size: 16px; height: 46px; }
-  .login-popup p, .login-popup .para, .login-popup .para1, .login-popup span { font-size: 16px; }
+  .login-popup-container {
+    padding: 28px 25px;
+    width: 70%;
+  }
+  .login-popup-title h2 {
+    font-size: 22px;
+  }
+  .login-popup-inputs input {
+    font-size: 16px;
+    height: 42px;
+  }
+  .login-popup-container button {
+    font-size: 16px;
+    height: 46px;
+  }
+  .login-popup p,
+  .login-popup span {
+    font-size: 16px;
+  }
 }
 
 /* Extra Large Devices: 769px - 992px */
 @media (min-width: 769px) and (max-width: 992px) {
-  .login-popup-container { padding: 30px 30px; width: 60%; }
-  .login-popup-title h2 { font-size: 24px; }
-  .login-popup-inputs input { font-size: 17px; height: 45px; }
-  .login-popup-container button { font-size: 17px; height: 48px; }
+  .login-popup-container {
+    padding: 30px 30px;
+    width: 60%;
+  }
+  .login-popup-title h2 {
+    font-size: 24px;
+  }
+  .login-popup-inputs input {
+    font-size: 17px;
+    height: 45px;
+  }
+  .login-popup-container button {
+    font-size: 17px;
+    height: 48px;
+  }
 }
 
 /* Desktop: 993px and above */
 @media (min-width: 993px) {
-  .login-popup-container { width: 500px; }
+  .login-popup-container {
+    width: 500px;
+  }
 }

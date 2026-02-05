@@ -3,18 +3,16 @@
   color: #333;
 }
 
-/* 🔷 Gradient Banner */
+/* 🔷 Banner */
 .contact-banner {
   background: linear-gradient(135deg, #ff6347, #e49260, orange);
   color: white;
   text-align: center;
   padding: 80px 20px;
-  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .contact-banner h1 {
   font-size: 60px;
   margin: 0;
@@ -25,12 +23,10 @@
   padding: 40px 5vw;
   text-align: center;
 }
-
 .inquiry-section h2 {
   font-size: 35px;
   margin-bottom: 10px;
 }
-
 .inquiry-section p {
   font-size: 21px;
   color: #666;
@@ -45,20 +41,17 @@
   gap: 15px;
   padding: 0 15px;
 }
-
 .contact-form textarea {
   padding: 15px;
-  font-size: 21px;
-  height: 220px;
+  font-size: 18px;
+  height: 200px;
   resize: none;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
-
 .contact-form button {
-  padding-left: 400px;
-  padding-top: 14px;   padding-bottom: 14px;
-  font-size: 21px;
+  padding: 12px;
+  font-size: 18px;
   background-color: tomato;
   color: white;
   border: none;
@@ -66,7 +59,6 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 .contact-form button:hover {
   background-color: #e14a2f;
 }
@@ -77,14 +69,12 @@
   padding: 40px 5vw;
   text-align: center;
 }
-
 .open-info-section h2 {
   font-size: 35px;
   margin-bottom: 20px;
 }
-
 .open-info p {
-  font-size: 21px;
+  font-size: 18px;
   margin: 6px 0;
 }
 
@@ -94,129 +84,132 @@
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 50px 5vw;
   background: #fff;
 }
-
 .customer-image {
   flex: 1;
   min-width: 250px;
   display: flex;
   justify-content: center;
 }
-
 .customer-image img {
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   height: auto;
-  margin-left: -300px;  margin-top: 50px;
-   margin-right: -200px;
-  border-radius:12px;
+  border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .customer-form {
   flex: 1;
-  min-width: 700px;
-  max-width: 700px;
+  min-width: 250px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  font-size: 21px;
 }
-
+.customer-form h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
 .customer-form input {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
- 
+  font-size: 16px;
 }
-
 .customer-form button {
-  padding-left: 300px;
+  padding: 12px;
+  font-size: 18px;
   background-color: #28a745;
   color: white;
-  font-size: 21px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
 }
-
 .customer-form button:hover {
   background-color: #218838;
 }
 
-.customer-form h2 {
-  margin-bottom: 10px;
-  font-size: 26px;
-}
-
 /* 📱 Responsive Styles */
+
+/* Large screens */
 @media (max-width: 992px) {
   .contact-banner h1 {
     font-size: 48px;
   }
-
-  .inquiry-section h2 {
-    font-size: 28px;
-  }
-
-  .inquiry-section p,
-  .open-info p {
-    font-size: 21px;
-  }
-
+  .inquiry-section h2,
+  .open-info-section h2,
   .customer-form h2 {
-    font-size: 24px;
-  }
-
-  .open-info-section h2 {
     font-size: 28px;
   }
-
   .customer-info-section {
     flex-direction: column;
     gap: 30px;
-    padding: 40px 5vw;
   }
+  .customer-image img {
+    max-width: 350px;
+  }
+}
 
+/* Tablets */
+@media (max-width: 768px) {
+  .contact-banner {
+    padding: 60px 10px;
+  }
+  .contact-banner h1 {
+    font-size: 36px;
+  }
+  .inquiry-section h2,
+  .open-info-section h2,
+  .customer-form h2 {
+    font-size: 24px;
+  }
+  .inquiry-section p,
+  .open-info p {
+    font-size: 16px;
+  }
+  .contact-form textarea,
+  .contact-form button,
+  .customer-form input,
+  .customer-form button {
+    font-size: 16px;
+    padding: 10px;
+  }
   .customer-image img {
     max-width: 300px;
   }
 }
 
-@media (max-width: 576px) {
+/* Mobile */
+@media (max-width: 480px) {
   .contact-banner {
-    height: 300px;
-    padding: 40px 10px;
+    height: 250px;
+    padding: 30px 10px;
   }
-
   .contact-banner h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
-
   .inquiry-section h2,
   .open-info-section h2,
   .customer-form h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
-
   .inquiry-section p,
   .open-info p {
-    font-size: 15px;
+    font-size: 14px;
   }
-
   .contact-form textarea,
   .contact-form button,
   .customer-form input,
   .customer-form button {
     font-size: 14px;
-    padding: 10px;
+    padding: 8px;
   }
-
   .customer-image img {
     max-width: 200px;
   }
