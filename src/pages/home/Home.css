@@ -1,105 +1,133 @@
-.header {
-  height: 36vw;
-margin-left:40px; 
-margin-right: 40px;
-margin-top: 40px; /* background: url('/images/banner.jpg') no-repeat center center; */
-  background-color: orange;
-  background-size: cover; /* ✅ Fixes image display */
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
+/* =======================
+   DESKTOP DEFAULT
+======================= */
+
+.header  {
+    align-items:left ;
+    display: flex;
+    
+    justify-content: space-between;
+    gap:120px;
+    padding: 40px;
+    position: relative;
+    background-color: orange;
+    background-size: cover;
+    border-radius: 15px;
+    min-height:400px;
 }
 
-.header-contents {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 50%;
-  gap: 1.5vw;
-  bottom: 10%;
-  left: 6vw;
-  animation: fadeIn 3s;
+/* LEFT IMAGE */
+.left-section img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
 }
 
-.header-contents h2 {
-  font-weight: 500;
-  color: white;
-  font-size: max(4.5vw, 22px);
-  margin-bottom: -10px;
+/* RIGHT CONTENT */
+.right-section {
+    flex: 1;
+    
 }
 
-.header-contents p {
-  color: white;
-  font-size: max(1.2vw, 14px);
-  line-height: 1.5;
+
+.right-section p {
+    margin-top:130px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.header-contents button {
-  border: none;
-margin-top: -30px;
-  font-weight: 500;
-  padding: 1vw 2.3vw;
-  background-color:tomato;
- color:white;
-  font-size: max(1vw, 13px);
-  cursor: pointer;
+.right-section button {
+    border: none;
+    font-weight: 500;
+    padding: 12px 30px;
+    background-color: tomato;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.header-contents a{
-  text-decoration: none;
+
+.right-section a {
+    text-decoration: none;
 }
-/* ✅ Tablet Screens */
+
+
+/* =======================
+   LARGE TABLET (992px)
+======================= */
+
+@media (max-width: 992px) {
+
+    .header {
+        gap: 40px;
+        padding: 30px;
+        min-height: auto;
+    }
+
+    .right-section h2 {
+        font-size: 36px;
+    }
+
+    .right-section p {
+        font-size: 16px;
+    }
+}
+
+
+/* =======================
+   TABLET (768px)
+======================= */
+
 @media (max-width: 768px) {
-  .header {
-    height: 55vw;
-    margin: 20px;
-    background-size: cover;
-  }
 
-  .header-contents {
-    max-width: 80%;
-    left: 5vw;
-    gap: 12px;
-  }
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 25px;
+    }
 
-  .header-contents h2 {
-    font-size: 24px;
-  }
+    .left-section img {
+        width: 300px;
+    }
 
-  .header-contents p {
-    font-size: 15px;
-  }
+    .right-section h2 {
+        font-size: 30px;
+    }
 
-  .header-contents button {
-    font-size: 14px;
-    padding: 8px 18px;
-  }
+    .right-section p {
+        font-size: 15px;
+    }
 }
 
-/* ✅ Mobile Screens */
+
+/* =======================
+   MOBILE (480px)
+======================= */
+
 @media (max-width: 480px) {
-  .header {
-    height: 60vw;
-    margin: 15px;
-    background-size: cover;
-  }
 
-  .header-contents {
-    max-width: 90%;
-    left: 20px;
-    bottom: 8%;
-  }
+    .header {
+        padding: 20px;
+        border-radius: 10px;
+    }
 
-  .header-contents h2 {
-    font-size: 20px;
-  }
+    .left-section img {
+        width: 220px;
+    }
 
-  .header-contents p {
-    font-size: 13px;
-  }
+    .right-section h2 {
+        font-size: 24px;
+    }
 
-  .header-contents button {
-    font-size: 13px;
-    padding: 8px 16px;
-  }
+    .right-section p {
+        font-size: 14px;
+    }
+
+    .right-section button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }

@@ -44,12 +44,13 @@ const Header = ({ setShowLogin }) => {
         <li className={menu === "home" ? "active" : ""}>
           <Link to="/">Home</Link>
         </li>
+        <li className={menu === "about" ? "active" : ""}>
+          <Link to="/about">About</Link>
+        </li>
         <li className={menu === "menu" ? "active" : ""}>
           <Link to="/menu">Menu</Link>
         </li>
-        <li className={menu === "about" ? "active" : ""}>
-          <Link to="/about">About Us</Link>
-        </li>
+        
         <li className={menu === "recepie" ? "active" : ""}>
           <Link to="/recepie">Recipes</Link>
         </li>

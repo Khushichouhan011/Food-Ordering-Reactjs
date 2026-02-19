@@ -17,6 +17,10 @@
   font-size: 28px;
   color: #ff6347;
   margin: 0;
+  text-decoration: none;
+}
+.navbar-left a {
+  text-decoration: none;
 }
 
 /* Nav Menu */
@@ -66,13 +70,14 @@
 }
 
 .sign-in-btn {
-  padding: 8px 18px;
+  padding: 9px 18px;
   border: none;
   background-color: #ff6347;
   color: white;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  margin-bottom: 2px;
 }
 
 .sign-in-btn:hover {

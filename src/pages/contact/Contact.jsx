@@ -1,15 +1,16 @@
 import "./Contact.css";
 import { BiDetail } from "react-icons/bi";
 import { IoCall } from "react-icons/io5";
+import {useRef} from"react";
+
 import img6 from "/images/img6.avif";
 
 const Contact = () => {
+  
   return (
     <div className="contact-page">
-      {/* Banner Section */}
-      <div className="contact-banner">
-        <h1>Contact Us</h1>
-      </div>
+      <h1>Contact Us</h1>
+      
 
       {/* Inquiry Section */}
       <div className="inquiry-section">
