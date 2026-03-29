@@ -2,8 +2,6 @@
 import "./Recepie.css";
 import { useState } from "react";
 
-
-
 const recipes = [
   {
     id: 1,
@@ -57,7 +55,7 @@ const Recepie = () => {
               <li key={index}>{step}</li>
             ))}
           </ol>
-          <button onClick={handleBack}>🔙 Back to all recipes</button>
+          <button onClick={handleBack}> Back to all recipes</button>
         </div>
       ) : (
         <div className="recipe-list">

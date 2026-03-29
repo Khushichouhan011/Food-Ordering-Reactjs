@@ -3,7 +3,7 @@
   color: #333;
 }
 
-/* 🔷 Banner */
+
 .contact-banner {
   background: linear-gradient(135deg, #ff6347, #e49260, orange);
   color: white;
@@ -18,7 +18,7 @@
   margin: 0;
 }
 
-/* 🔶 Inquiry Section */
+
 .inquiry-section {
   padding: 40px 5vw;
   text-align: center;
@@ -63,7 +63,6 @@
   background-color: #e14a2f;
 }
 
-/* 🕒 Open Info */
 .open-info-section {
   background-color: #fafafa;
   padding: 40px 5vw;
@@ -77,8 +76,6 @@
   font-size: 18px;
   margin: 6px 0;
 }
-
-/* 🧾 Customer Info Section */
 .customer-info-section {
   display: flex;
   flex-wrap: wrap;
@@ -134,10 +131,6 @@
 .customer-form button:hover {
   background-color: #218838;
 }
-
-/* 📱 Responsive Styles */
-
-/* Large screens */
 @media (max-width: 992px) {
   .contact-banner h1 {
     font-size: 48px;
@@ -155,8 +148,6 @@
     max-width: 350px;
   }
 }
-
-/* Tablets */
 @media (max-width: 768px) {
   .contact-banner {
     padding: 60px 10px;
@@ -184,8 +175,6 @@
     max-width: 300px;
   }
 }
-
-/* Mobile */
 @media (max-width: 480px) {
   .contact-banner {
     height: 250px;

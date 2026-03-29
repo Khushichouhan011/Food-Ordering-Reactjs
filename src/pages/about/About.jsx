@@ -4,12 +4,11 @@ import { IoFastFoodOutline } from "react-icons/io5";
 import "./About.css";
 import img6 from "/images/img6.avif";
 import img5 from "/images/img5.avif";
-
 const About = () => {
   return (
     <div className="about-page">
       <h1>About Us</h1>
-      {/* Section 1 - Who We Are */}
+   
       <div className="about-section">
         <div className="about-image">
           <img src={img6} alt="About Us" />
@@ -29,7 +28,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Section 2 - What We Do */}
+     
       <div className="about-section reverse">
         <div className="about-image">
           <img src={img5} alt="Our Service" />
@@ -49,7 +48,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Section 3 - Why Choose Us */}
+      
       <div className="about-growth-section">
         <h1>Why Choose Us?</h1>
         <p>

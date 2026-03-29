@@ -1,6 +1,3 @@
-/* =======================
-   DESKTOP DEFAULT
-======================= */
 
 .header  {
     align-items:left ;
@@ -16,14 +13,12 @@
     min-height:400px;
 }
 
-/* LEFT IMAGE */
 .left-section img {
     width: 420px;
     max-width: 100%;
     height: auto;
 }
 
-/* RIGHT CONTENT */
 .right-section {
     flex: 1;
     
@@ -54,9 +49,6 @@
 }
 
 
-/* =======================
-   LARGE TABLET (992px)
-======================= */
 
 @media (max-width: 992px) {
 
@@ -72,14 +64,7 @@
 
     .right-section p {
         font-size: 16px;
-    }
-}
-
-
-/* =======================
-   TABLET (768px)
-======================= */
-
+    }}
 @media (max-width: 768px) {
 
     .header {
@@ -103,9 +88,6 @@
 }
 
 
-/* =======================
-   MOBILE (480px)
-======================= */
 
 @media (max-width: 480px) {
 

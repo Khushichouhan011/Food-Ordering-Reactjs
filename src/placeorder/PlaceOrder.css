@@ -48,7 +48,7 @@ input[type="email"]:focus {
   border-color: #007bff;
 }
 
-/* Cart Total Section (shared style from Cart.css) */
+
 .cart-total h2 {
   margin-bottom: 20px;
   color: #333;

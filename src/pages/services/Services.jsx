@@ -1,7 +1,4 @@
-import React from "react";
-import { CiDeliveryTruck } from "react-icons/ci";
-import { IoFastFoodOutline } from "react-icons/io5";
-import { LuPackage } from "react-icons/lu";
+
 
 import fbanner from "/images/fbanner.jpg";
 import people1 from "/images/people1.jpg";
@@ -14,7 +11,7 @@ import "./Services.css";
 const Services = () => {
   return (
     <div className="services-page">
-      {/* Banner Section */}
+  
       <div className="services-banner">
         <img src={fbanner} alt="Services" />
         <div className="head">
@@ -24,7 +21,6 @@ const Services = () => {
         
       </div> 
 
-      {/* Reviews Section */}
       <div className="reviews-section">
         <h2>What Our Customers Say</h2>
         <p className="line"></p>
@@ -39,7 +35,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Stats Section */}
+    
       <section className="stats-section">
         <div className="stat-card">
           <h2 className="stat-number">3 Billion+</h2>

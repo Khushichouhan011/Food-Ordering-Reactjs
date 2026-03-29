@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* 🔶 About Section (Image + Text) */
+
 .about-section {
   display: flex;
   align-items: center;
@@ -63,7 +63,6 @@
   background-color: #e04e2d;
 }
 
-/* 🔷 Growth Section */
 .about-growth-section {
   text-align: center;
   padding: 40px 5vw;
@@ -86,7 +85,7 @@
   line-height: 1.6;
 }
 
-/* 🔸 Reason Cards */
+
 .growth-reasons {
   display: flex;
   flex-direction: column;
@@ -119,7 +118,7 @@
   color: #555;
 }
 
-/* ✅ Small Devices: 350px - 480px */
+
 @media (max-width: 480px) {
   .about-page {
     padding: 30px 4vw;
@@ -155,7 +154,6 @@
   }
 }
 
-/* ✅ Medium Devices: 481px - 678px */
 @media (min-width: 481px) and (max-width: 678px) {
   .about-section {
     flex-direction: column;
@@ -196,7 +194,7 @@
   }
 }
 
-/* ✅ Large Devices: 679px - 768px */
+
 @media (min-width: 679px) and (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -238,7 +236,7 @@
   }
 }
 
-/* ✅ Extra Large Devices: 769px - 992px */
+
 @media (min-width: 769px) and (max-width: 992px) {
   .about-section {
     flex-direction: row;
@@ -279,7 +277,6 @@
   }
 }
 
-/* ✅ Desktop: 993px and above */
 @media (min-width: 993px) {
   .about-section {
     flex-direction: row;

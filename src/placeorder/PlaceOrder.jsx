@@ -1,56 +1,37 @@
+
 import { useContext } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../pages/menu/StoreContext";
 
 const PlaceOrder = () => {
   const { getTotalCartAmount } = useContext(StoreContext);
-  const total = getTotalCartAmount?.() || 0;
+
+  const subtotal = getTotalCartAmount();
+  const deliveryFee = subtotal === 0 ? 0 : 2;
+  const total = subtotal + deliveryFee;
 
   return (
     <form className="place-order" onSubmit={(e) => e.preventDefault()}>
+
       <div className="place-order-left">
-        <p className="title">Delivery Information</p>
+        <p>Delivery Information</p>
 
-        <div className="multi-field">
-          <input type="text" placeholder="First Name" required />
-          <input type="text" placeholder="Last Name" required />
-        </div>
-
-        <input type="email" placeholder="Email Address" required />
-        <input type="text" placeholder="Street" required />
-
-        <div className="multi-field">
-          <input type="text" placeholder="City" required />
-          <input type="text" placeholder="State" required />
-        </div>
-
-        <div className="multi-field">
-          <input type="text" placeholder="Pin Code" required />
-          <input type="text" placeholder="Country" required />
-        </div>
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Address" required />
       </div>
 
       <div className="place-order-right">
-        <div className="cart-total">
-          <h2>Cart Totals</h2>
+        <h2>Total</h2>
 
-          <div className="cart-total-details">
-            <p>SubTotal</p>
-            <p>${total}</p>
-          </div>
+        <p>Subtotal: ${subtotal}</p>
+        <p>Delivery: ${deliveryFee}</p>
+        <h3>Total: ${total}</h3>
 
-          <div className="cart-total-details">
-            <p>Delivery Fee</p>
-            <p>$2</p>
-          </div>
-
-          <div className="cart-total-details">
-            <b>Total</b>
-            <b>${total + 2}</b>
-          </div>
-
-          <button type="submit">Proceed to Payment</button>
-        </div>
+        <button disabled={subtotal === 0}>
+          Proceed to Payment
+        </button>
       </div>
     </form>
   );
