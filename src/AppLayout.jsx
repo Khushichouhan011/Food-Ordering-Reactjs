@@ -6,18 +6,13 @@ import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   const [showLogin, setShowLogin] = useState(false);
-
   return (
     <>
       <Header setShowLogin={setShowLogin} />
-
-      {/* 🔥 MUST */}
       {showLogin && <Login setShowLogin={setShowLogin} />}
-
       <main style={{ padding: "20px" }}>
         <Outlet />
       </main>
-
       <Footer />
     </>
   );

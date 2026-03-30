@@ -8,7 +8,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
-  // ✅ Add item
+
   const addToCart = (itemId) => {
     setCartItems((prev) => ({
       ...prev,
@@ -16,7 +16,7 @@ const StoreContextProvider = (props) => {
     }));
   };
 
-  // ✅ Remove item
+
   const removeFromCart = (itemId) => {
     setCartItems((prev) => {
       if (prev[itemId] > 1) {
@@ -29,13 +29,13 @@ const StoreContextProvider = (props) => {
     });
   };
 
-  // ✅ TOTAL CALCULATION FIXED
+
  const getTotalCartAmount = () => {
   let totalAmount = 0;
 
   for (const item in cartItems) {
     const itemInfo = food_list.find(
-      (product) => product.id === Number(item)   // ✅ FIXED (_id → id)
+      (product) => product.id === Number(item)   
     );
 
     if (itemInfo) {

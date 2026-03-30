@@ -7,7 +7,7 @@ const PlaceOrder = () => {
   const { getTotalCartAmount } = useContext(StoreContext);
 
   const subtotal = getTotalCartAmount();
-  const deliveryFee = subtotal === 0 ? 0 : 2;
+  const deliveryFee = subtotal === 0 ? 0 : 60;
   const total = subtotal + deliveryFee;
 
   return (
